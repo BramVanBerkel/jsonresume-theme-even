@@ -188,6 +188,10 @@ blockquote > * + *,
   margin-top: 0.6em;
 }
 
+article {
+  page-break-inside: avoid;
+}
+
 .meta {
   color: var(--color-secondary);
 }
