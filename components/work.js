@@ -32,7 +32,7 @@ export default function Work(work = []) {
               <article>
                 <header>
                   <h4>
-                    ${Link(url, name)} ${icon ? `<img alt="icon for ${name}" src="${icon}" class="work-icon" />` : null}
+                    ${icon ? `<img alt="icon for ${name}" src="${icon}" class="work-icon" />` : null} ${Link(url, name)}
                   </h4>
                   <div class="meta">${description && html` <div>${description}</div>`}</div>
                 </header>
