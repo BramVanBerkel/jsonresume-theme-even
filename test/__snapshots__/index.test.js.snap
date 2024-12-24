@@ -92,8 +92,10 @@ customElements.define('time-duration', TimeDuration)
           
               <article>
                 <header>
-                  <h4><a href="http://piedpiper.example.com">Pied Piper</a></h4>
-                  <div class="meta"><div>Awesome compression company</div></div>
+                  <h4>
+                     <a href="http://piedpiper.example.com">Pied Piper</a>
+                  </h4>
+                  <div class="meta"> <div>Awesome compression company</div></div>
                 </header>
                 <div class="timeline">
                   
@@ -101,14 +103,14 @@ customElements.define('time-duration', TimeDuration)
                         <div>
                           <h5>CEO/President</h5>
                           <div class="meta">
-                            <div><time-duration><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time></time-duration></div>
-                            <div>Palo Alto, CA</div>
+                             <div><time-duration><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time></time-duration></div>
+                             <div>Palo Alto, CA</div>
                           </div>
                         </div>
                         <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                         
                           <ul>
-                            <li><p>Build an algorithm for artist to detect if their music was violating copy right infringement laws</p></li><li><p>Successfully won Techcrunch Disrupt</p></li><li><p>Optimized an algorithm that holds the current world record for Weisman Scores</p></li>
+                             <li><p>Build an algorithm for artist to detect if their music was violating copy right infringement laws</p></li> <li><p>Successfully won Techcrunch Disrupt</p></li> <li><p>Optimized an algorithm that holds the current world record for Weisman Scores</p></li>
                           </ul>
                         
                       </div>
