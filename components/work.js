@@ -19,8 +19,6 @@ export default function Work(work = []) {
     return acc
   }, /** @type {NestedWork[]} */ ([]))
 
-  console.log({ nestedWork })
-
   return (
     work.length > 0 &&
     html`
