@@ -12,10 +12,10 @@ import Link from './link.js'
  * @returns {string | false}
  */
 export default function Work(work = []) {
-  const nestedWork = work.reduce((acc, { description, name, url, icon, ...rest }) => {
+  const nestedWork = work.reduce((acc, { description, name, url, icon, keywords, ...rest }) => {
     const prev = acc[acc.length - 1]
     if (prev && prev.name === name && prev.description === description && prev.url === url) prev.items.push(rest)
-    else acc.push({ description, name, url, icon, items: [rest] })
+    else acc.push({ description, name, url, icon, keywords, items: [rest] })
     return acc
   }, /** @type {NestedWork[]} */ ([]))
 
@@ -26,7 +26,7 @@ export default function Work(work = []) {
         <h3>Work</h3>
         <div class="stack">
           ${nestedWork.map(
-            ({ description, name, url, icon, items = [] }) => html`
+            ({ description, name, url, icon, keywords, items = [] }) => html`
               <article>
                 <header>
                   <h4>
@@ -56,6 +56,12 @@ export default function Work(work = []) {
                     `,
                   )}
                 </div>
+                ${keywords.length > 0 &&
+                html`
+                  <ul class="tag-list">
+                    ${keywords.map(keyword => html`<li>${keyword}</li>`)}
+                  </ul>
+                `}
               </article>
             `,
           )}
