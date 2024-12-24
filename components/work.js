@@ -26,7 +26,7 @@ export default function Work(work = []) {
         <h3>Work</h3>
         <div class="stack">
           ${nestedWork.map(
-            ({ description, name, url, icon, keywords, items = [] }) => html`
+            ({ description, name, url, icon, keywords = [], items = [] }) => html`
               <article>
                 <header>
                   <h4>
