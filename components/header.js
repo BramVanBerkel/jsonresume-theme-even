@@ -52,7 +52,8 @@ export default function Header(basics = {}) {
             </li>
           `,
         )}
-        ${window.print &&
+        ${typeof window !== 'undefined' &&
+        window.print &&
         html`
           <li>
             ${Icon('download')}
