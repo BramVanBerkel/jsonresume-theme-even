@@ -52,14 +52,10 @@ export default function Header(basics = {}) {
             </li>
           `,
         )}
-        ${typeof window !== 'undefined' &&
-        window.print &&
-        html`
-          <li>
-            ${Icon('download')}
-            <a class="no-print" onclick="window.print()">Download as PDF</a>
-          </li>
-        `}
+        <li>
+          ${Icon('download')}
+          <a class="no-print" onclick="window.print()">Download as PDF</a>
+        </li>
       </ul>
     </header>
   `
