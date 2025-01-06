@@ -52,9 +52,9 @@ export default function Header(basics = {}) {
             </li>
           `,
         )}
-        <li>
+        <li class="no-print">
           ${Icon('download')}
-          <a class="no-print" onclick="window.print()">Download as PDF</a>
+          <a onclick="window.print()">Download as PDF</a>
         </li>
       </ul>
     </header>
