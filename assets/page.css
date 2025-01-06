@@ -301,7 +301,8 @@ article {
 }
 
 @media print {
-  .duration {
+  .duration,
+  .no-print {
     display: none;
   }
 }
