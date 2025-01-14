@@ -15,7 +15,7 @@ const formatCountry = countryCode =>
  * @returns {string}
  */
 export default function Header(basics = {}) {
-  const { email, image, label, location, name, phone, profiles = [], summary, url } = basics
+  const { email, image, label, pdfName, location, name, phone, profiles = [], summary, url } = basics
 
   return html`
     <header class="masthead">
@@ -52,10 +52,13 @@ export default function Header(basics = {}) {
             </li>
           `,
         )}
-        <li class="no-print">
-          ${Icon('download')}
-          <a onclick="window.print()">Download as PDF</a>
-        </li>
+        ${pdfName &&
+        html`
+          <li class="no-print">
+            ${Icon('download')}
+            <a href="/${pdfName}">Download as PDF</a>
+          </li>
+        `}
       </ul>
     </header>
   `
